@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #764BA2 , #667EEA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.container {
+    width: 500px;
+    min-height: 500px;
+    background-color: lavenderblush;
+    border-radius: 8px;
+    /* box-shadow: -5px 5px 5px gray;     */
+}
+
+.container h1 {
+    margin: 20px 30px;
+}
+
+.input-div {
+    padding-left: 10px;
+    height: 40px;
+    background-color: rgb(224, 220, 215);
+    margin: 20px 20px 10px ;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-div #input-box {
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 16px;
+    width: 350px;
+}
+.input-div #add-btn {
+    padding: 5px 30px;
+    border-radius: 40px;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    background-color: rgb(76, 32, 197);
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#list-container {
+    list-style: none;
+    padding: 10px;
+}
+
+#list-container li {
+    margin-bottom: 10px;
+    font-size: 19px;
+    padding: 5px 5px 5px 50px;
+    position: relative;
+    user-select: none;
+    font-weight: 600;
+}
+
+#list-container li::before {
+    content: '';
+    position: absolute;
+    background-image: url(images/unchecked.png);
+    height: 26px;
+    width: 26px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    top: 5px;
+    left: 10px;
+}
+
+#list-container li span {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    text-align: center;
+    width: 30px;
+    height: 30px; 
+    font-size: 22px; 
+    border-radius: 50%;
+    color: black; 
+}
+
+#list-container li span:hover {
+    background-color: rgb(224, 220, 215);
+}
+
+#list-container li.checked {
+    color: rgb(117, 112, 112);
+    text-decoration: line-through;
+}
+
+#list-container li.checked::before {
+    background-image: url(images/checked.png);
+}
